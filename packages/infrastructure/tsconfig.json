@@ -1,0 +1,6 @@
+{
+    "exclude": [
+        "cdk.out"
+    ],
+    "extends": "../../tsconfig.json",
+}
