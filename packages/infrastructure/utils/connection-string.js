@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.buildPostgresConnectionString = void 0;
+/**
+ *
+ */
+function buildPostgresConnectionString(username, password, socketAddress, databaseName) {
+    return `postgresql://${username}:${password}@${socketAddress}/${databaseName}?schema=public`;
+}
+exports.buildPostgresConnectionString = buildPostgresConnectionString;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29ubmVjdGlvbi1zdHJpbmcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJjb25uZWN0aW9uLXN0cmluZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQTs7R0FFRztBQUNILFNBQWdCLDZCQUE2QixDQUFDLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxhQUFxQixFQUFFLFlBQW9CO0lBQ3pILE9BQU8sZ0JBQWdCLFFBQVEsSUFBSSxRQUFRLElBQUksYUFBYSxJQUFJLFlBQVksZ0JBQWdCLENBQUM7QUFFakcsQ0FBQztBQUhELHNFQUdDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGJ1aWxkUG9zdGdyZXNDb25uZWN0aW9uU3RyaW5nKHVzZXJuYW1lOiBzdHJpbmcsIHBhc3N3b3JkOiBzdHJpbmcsIHNvY2tldEFkZHJlc3M6IHN0cmluZywgZGF0YWJhc2VOYW1lOiBzdHJpbmcpIHtcbiAgICByZXR1cm4gYHBvc3RncmVzcWw6Ly8ke3VzZXJuYW1lfToke3Bhc3N3b3JkfUAke3NvY2tldEFkZHJlc3N9LyR7ZGF0YWJhc2VOYW1lfT9zY2hlbWE9cHVibGljYDtcblxufSJdfQ==

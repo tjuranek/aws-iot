@@ -4,9 +4,10 @@
     "app": "bin/app.js"
   },
   "scripts": {
-    "destroy": "npx cdk destroy",
-    "deploy": "npx cdk deploy --outputs-file ./cdk.out/PrintsterStack.outputs.json",
-    "synth": "npx cdk synth"
+    "bootstrap": "npm run spinup && npm run generate-env-files",
+    "generate-env-files": "npx ts-node ./scripts/build-application-env.ts",
+    "spinup": "npx cdk deploy --require-approval never --outputs-file ./cdk.out/PrintsterStack.outputs.json",
+    "teardown": "npx cdk destroy"
   },
   "devDependencies": {
     "@types/node": "10.17.27",

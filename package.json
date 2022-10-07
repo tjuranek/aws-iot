@@ -1,17 +1,15 @@
 {
   "name": "printster",
   "workspaces": [
-    "packages/application",
-    "packages/infrastructure"
+    "packages/infrastructure",
+    "packages/application"
   ],
   "scripts": {
-    "bootstrap": "npm install && npm run bootstrap:infrastructure",
-    "bootstrap:infrastructure": "cd packages/infrastructure && npm run synth && npm run deploy",
-    "start": "npm run start --workspaces --if-present"
+    "bootstrap": "npm install && npm run bootstrap --workspaces",
+    "ci": "npm run bootstrap && npm run test"
   },
   "scriptDescriptions": {
-    "bootstrap": "Installs all packages dependencies and then bootstraps packages in the correct order.",
-    "bootstrap:infrastructure": "Synthesizes and deploys the default stack in the infrastructure package.",
-    "start": "Runs the start command in all workspaces if present." 
+    "bootstrap": "Installs dependencies and bootstraps each workspace in order.",
+    "ci": "Runs the bootstrap command and then runs tests for each project."
   }
 }
